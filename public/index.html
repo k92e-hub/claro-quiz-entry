@@ -265,9 +265,11 @@
     }
     .ugc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
     .ugc-card { display: flex; flex-direction: column; align-items: center; text-align: center; }
-    .ugc-image { width: 100%; aspect-ratio: 3 / 4; background: #E8E8E8; margin-bottom: 16px; object-fit: cover; }
+    .ugc-img-wrap { width: 100%; border-radius: 12px; overflow: hidden; margin-bottom: 16px; }
+    .ugc-image { width: 100%; aspect-ratio: 3 / 4; background: #E8E8E8; object-fit: cover; display: block; border-radius: 12px; }
     .ugc-name { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
-    .ugc-quote { font-size: 13px; color: var(--text-secondary); line-height: 1.65; font-style: italic; margin-bottom: 12px; }
+    .ugc-quote { font-size: 13px; color: var(--text-secondary); line-height: 1.65; font-style: italic; margin-bottom: 12px; transition: transform 0.3s ease; }
+    .ugc-quote:hover { transform: scale(1.02); }
     .ugc-qmark { font-family: 'DM Sans', sans-serif; font-size: 52px; color: #C8C8C8; line-height: 1; }
 
     /* MOBILE */
@@ -377,21 +379,21 @@
     <div class="ugc-grid">
 
       <div class="ugc-card">
-        <img src="/ugc2.png" alt="Emma R." class="ugc-image" />
+        <div class="ugc-img-wrap"><img src="/ugc2.png" alt="Emma R." class="ugc-image" /></div>
         <p class="ugc-name">Emma R., 46</p>
         <p class="ugc-quote">"Takes 2-3 minutes and gives you a full personalised skin analysis. I shared it with my sister and she got completely different results - which proves it's actually tailored to you. Love that it's not a one-size-fits-all thing."</p>
         <div class="ugc-qmark">&ldquo;</div>
       </div>
 
       <div class="ugc-card">
-        <img src="/ugc1.png" alt="Marieke V." class="ugc-image" />
+        <div class="ugc-img-wrap"><img src="/ugc1.png" alt="Marieke V." class="ugc-image" /></div>
         <p class="ugc-name">Marieke V., 34</p>
         <p class="ugc-quote">"I always thought cellulite was just something I had to live with. The quiz showed me exactly why my skin wasn't responding to anything I tried - and the routine it gave me actually made sense for my body type. After 6 weeks I can genuinely see a difference in my thighs."</p>
         <div class="ugc-qmark">&ldquo;</div>
       </div>
 
       <div class="ugc-card">
-        <img src="/ugc3.png" alt="Lena M." class="ugc-image" />
+        <div class="ugc-img-wrap"><img src="/ugc3.png" alt="Lena M." class="ugc-image" /></div>
         <p class="ugc-name">Lena M., 41</p>
         <p class="ugc-quote">"I've tried creams, dry brushing, everything. The quiz helped me understand my skin type was the reason nothing worked before. The personalised plan was a game changer. Three months in and my confidence is back."</p>
         <div class="ugc-qmark">&ldquo;</div>
