@@ -265,7 +265,7 @@
     }
     .ugc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
     .ugc-card { display: flex; flex-direction: column; align-items: center; text-align: center; }
-    .ugc-image { width: 100%; aspect-ratio: 3 / 4; background: #E8E8E8; margin-bottom: 16px; }
+    .ugc-image { width: 100%; aspect-ratio: 3 / 4; background: #E8E8E8; margin-bottom: 16px; object-fit: cover; }
     .ugc-name { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
     .ugc-quote { font-size: 13px; color: var(--text-secondary); line-height: 1.65; font-style: italic; margin-bottom: 12px; }
     .ugc-qmark { font-family: 'DM Sans', sans-serif; font-size: 52px; color: #C8C8C8; line-height: 1; }
@@ -377,9 +377,9 @@
     <div class="ugc-grid">
 
       <div class="ugc-card">
-        <div class="ugc-image"></div>
-        <p class="ugc-name">Anna K.</p>
-        <p class="ugc-quote">"My legs haven't looked this smooth in SUCH A LONG TIME. This crazy little gadget has completely exceeded all my expectations."</p>
+        <img src="/ugc2.png" alt="Emma R." class="ugc-image" />
+        <p class="ugc-name">Emma R., 46</p>
+        <p class="ugc-quote">"Takes 2-3 minutes and gives you a full personalised skin analysis. I shared it with my sister and she got completely different results - which proves it's actually tailored to you. Love that it's not a one-size-fits-all thing."</p>
         <div class="ugc-qmark">&ldquo;</div>
       </div>
 
