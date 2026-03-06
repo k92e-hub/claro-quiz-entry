@@ -254,6 +254,42 @@
     .expert-name { font-size: 13px; font-weight: 600; color: var(--text); }
     .expert-title { font-size: 11px; color: var(--muted); margin-top: 2px; }
 
+    /* INTRO OVERLAY */
+    .intro-overlay {
+      position: fixed; inset: 0; z-index: 10000;
+      background: #EDEAF5;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      transition: opacity 0.6s ease;
+    }
+    .intro-overlay.fade-out { opacity: 0; pointer-events: none; }
+    .intro-word {
+      display: flex; gap: 4px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 80px; font-weight: 700;
+      color: #1A1A1A; letter-spacing: 0.05em;
+    }
+    .intro-letter {
+      opacity: 0;
+      animation: letterIn 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+    .intro-letter:nth-child(1) { animation-delay: 0.2s; }
+    .intro-letter:nth-child(2) { animation-delay: 0.45s; }
+    .intro-letter:nth-child(3) { animation-delay: 0.7s; }
+    .intro-letter:nth-child(4) { animation-delay: 0.95s; }
+    .intro-letter:nth-child(5) { animation-delay: 1.2s; }
+    @keyframes letterIn { to { opacity: 1; } }
+    .intro-line-track {
+      width: 200px; height: 2px;
+      background: rgba(26,26,26,0.12);
+      margin-top: 20px; border-radius: 2px; overflow: hidden;
+    }
+    .intro-line-fill {
+      width: 0; height: 100%;
+      background: #1A1A1A; border-radius: 2px;
+      animation: lineGrow 2.5s cubic-bezier(0.25, 0.1, 0.25, 1) 0.2s forwards;
+    }
+    @keyframes lineGrow { to { width: 100%; } }
+
     /* MOBILE */
     @media (max-width: 600px) {
       header { padding: 15px 20px; }
@@ -270,6 +306,20 @@
   </style>
 </head>
 <body>
+
+<!-- INTRO ANIMATION -->
+<div class="intro-overlay" id="introOverlay">
+  <div class="intro-word">
+    <span class="intro-letter">C</span>
+    <span class="intro-letter">L</span>
+    <span class="intro-letter">A</span>
+    <span class="intro-letter">R</span>
+    <span class="intro-letter">O</span>
+  </div>
+  <div class="intro-line-track">
+    <div class="intro-line-fill"></div>
+  </div>
+</div>
 
 <!-- HEADER -->
 <header>
@@ -534,5 +584,14 @@
   </div>
 </section>
 
+<script>
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+      var overlay = document.getElementById('introOverlay');
+      overlay.classList.add('fade-out');
+      setTimeout(function() { overlay.remove(); }, 600);
+    }, 2700);
+  });
+</script>
 </body>
 </html>
