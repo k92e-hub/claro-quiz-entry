@@ -254,6 +254,22 @@
     .expert-name { font-size: 13px; font-weight: 600; color: var(--text); }
     .expert-title { font-size: 11px; color: var(--muted); margin-top: 2px; }
 
+    /* UGC */
+    .ugc { background: #FFFFFF; padding: 80px 24px; }
+    .ugc-inner { max-width: 980px; margin: 0 auto; }
+    .ugc-title {
+      font-family: 'DM Sans', sans-serif;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 700; line-height: 1.15; color: var(--text);
+      text-align: center; margin-bottom: 48px;
+    }
+    .ugc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+    .ugc-card { display: flex; flex-direction: column; align-items: center; text-align: center; }
+    .ugc-image { width: 100%; aspect-ratio: 3 / 4; background: #E8E8E8; margin-bottom: 16px; }
+    .ugc-name { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
+    .ugc-quote { font-size: 13px; color: var(--text-secondary); line-height: 1.65; font-style: italic; margin-bottom: 12px; }
+    .ugc-qmark { font-family: 'DM Sans', sans-serif; font-size: 52px; color: #C8C8C8; line-height: 1; }
+
     /* MOBILE */
     @media (max-width: 600px) {
       header { padding: 15px 20px; }
@@ -264,6 +280,7 @@
       .stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.12); padding-bottom: 24px; }
       .stat-item:last-child { border-bottom: none; padding-bottom: 0; }
       .ba-grid { grid-template-columns: 1fr; }
+      .ugc-grid { grid-template-columns: 1fr; max-width: 320px; margin: 0 auto; gap: 40px; }
       .expert-card { flex-direction: column; padding: 24px; }
       .tp-badge { display: none; }
     }
@@ -370,6 +387,38 @@
     </div>
   </div>
 </div>
+
+<!-- UGC -->
+<section class="ugc">
+  <div class="ugc-inner">
+    <div class="section-label" style="text-align:center">UGC</div>
+    <h2 class="ugc-title">Real Women, Real Results</h2>
+    <div class="ugc-grid">
+
+      <div class="ugc-card">
+        <div class="ugc-image"></div>
+        <p class="ugc-name">Anna K.</p>
+        <p class="ugc-quote">"My legs haven't looked this smooth in SUCH A LONG TIME. This crazy little gadget has completely exceeded all my expectations."</p>
+        <div class="ugc-qmark">&ldquo;</div>
+      </div>
+
+      <div class="ugc-card">
+        <div class="ugc-image"></div>
+        <p class="ugc-name">Susan F.</p>
+        <p class="ugc-quote">"I didn't expect the results I got, but I'm over the moon!!! I love using it while I'm chilling on the couch watching Netflix."</p>
+        <div class="ugc-qmark">&ldquo;</div>
+      </div>
+
+      <div class="ugc-card">
+        <div class="ugc-image"></div>
+        <p class="ugc-name">Julie F.</p>
+        <p class="ugc-quote">"The Claro Cupper has helped me keep wearing dresses without feeling self-conscious. My skin looks so much smoother!"</p>
+        <div class="ugc-qmark">&ldquo;</div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 <!-- BEFORE & AFTERS -->
 <section class="section">
